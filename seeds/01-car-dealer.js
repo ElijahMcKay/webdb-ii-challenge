@@ -1,13 +1,31 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('car-dealer').truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('car-dealer').insert([
+        { 
+          make: "Chevy" ,
+          model: "Camaro", 
+          VIN: "DSKD81KD241ND", 
+          mileage: 12034, 
+          "Title Status": "clean"
+        },
+        { 
+          make: "Ford",
+          model: "Mustang", 
+          VIN: "GASD81KD01ND", 
+          mileage: 234214, 
+          "Title Status": null
+        },
+        { 
+          make: "Audi",
+          model: "S7", 
+          VIN: "DSKD81KD101ND", 
+          mileage: 4353, 
+          "Title Status": "Salvaged"
+        },
       ]);
     });
 };
