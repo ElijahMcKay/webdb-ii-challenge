@@ -24,7 +24,7 @@ exports.seed = function(knex) {
           model: "S7", 
           VIN: "DSKD81KD101ND", 
           mileage: 4353, 
-          "Title Status": "Salvaged"
+          "Title Status": "salvaged"
         },
       ]);
     });
